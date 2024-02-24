@@ -1,0 +1,23 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Create your profile
+        link(rel="stylesheet", href="/css/create-profile.css")
+        script(src="/script/create-profile.js")
+
+    body 
+        form(id="create-profile-form", method="POST" enctype="multipart/form-data")
+            h1(id="form-heading") Create Profile
+            div(id="profile-picture")
+                img(src="/profile_pictures/default-profile-picture.png", alt="profile-picture")
+                input(type="file", name="profile_picture")
+                i(class="icon")
+            label(for="firstname") First Name:
+            input(class="input-field" type="text" id="firstname" name="firstname" placeholder="Firstname" autocomplete="off" required)
+            label(for="lastname") Last Name:
+            input(class="input-field" type="text" id="lastname" name="lastname" placeholder="Lastname" autocomplete="off" required)
+            label(for="firstname") Bio:
+            textarea(name="bio", cols="30", rows="10" placeholder="Describe Yourself .." id="bio" required)
+            button(type="submit") Continue  

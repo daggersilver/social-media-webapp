@@ -1,0 +1,7 @@
+p Suggested for you
+div(class="suggestion-panel")
+    each suggestion in suggestions
+        div(class="sugesstion-tile")
+            a(href="/user/"+suggestion.username class="user-profile-pic")
+                img(src="/profile_pictures/"+suggestion.profilePicture, alt="")
+            a(href="/user/"+suggestion.username class="user-username")="@"+suggestion.username

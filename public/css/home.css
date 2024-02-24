@@ -1,0 +1,269 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+}
+
+#main-container {
+    height: 90%;
+    width: 90%;
+    display: flex;
+    margin: 0 auto;
+    gap: 10px;
+    background-color: rgb(240, 237, 237);
+}
+
+#main-container > div {
+    margin: 10px;
+}
+
+#post-container {
+    background-color: white;
+    width: 65%;
+    overflow: auto;
+    padding: 50px 0;
+}
+
+#friendlist-container {
+    width: 35%;
+    overflow: auto;
+    padding: 10px 10px 50px 20px;
+}
+
+#friendlist-container  > p{
+    font-size: 1.5em;
+    color: rgb(61, 60, 60);
+    padding: 20px;
+}
+
+.user-tile {
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 20px;
+    align-items: center;
+    border-bottom: 1px solid rgb(226, 224, 224);
+}
+
+.user-tile-1 {
+    display: flex;
+    align-items: center;
+}
+
+.user-profile-pic {
+    width: 45px;
+    height: 45px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    border: 1px solid gray;
+    margin-right: 10px;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.user-profile-pic img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 50%;
+}
+
+.user-name {
+    text-decoration: none;
+    color: black;
+}
+
+.user-username {
+    font-size: 0.9em;
+    color: rgb(121, 119, 119);
+}
+
+.message-btn {
+    border: none;
+    cursor: pointer;
+    margin-right: 30px;
+    background-color: transparent;
+}
+
+.message-btn i {
+    display: block;
+    width: 25px;
+    height: 25px;
+    background-color: rgb(31, 30, 30);
+    mask-image: url('/images/icons/message-regular.svg');
+    mask-repeat: no-repeat;
+    mask-size: contain;
+}
+
+.friend-tile {
+    padding: 10px;
+}
+
+.post-tile {
+    padding: 30px;
+    margin: auto;
+    background-color: rgb(241, 241, 233);
+    width: 90%;
+    margin-top: 10px;
+    margin-top: 20px;
+    border-radius: 5px;
+    border-bottom: 1px solid rgb(223, 220, 220);
+    box-shadow: 2px 1px 5px 2px #dfdfdf;
+    position: relative;
+}
+
+.post-head {
+    display: flex;
+    align-items: center;
+}
+
+.post-dp img{
+    width: 60px;
+    height: 60px;
+    background-size: cover;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    background-color: black;
+    object-fit: contain;
+}
+
+.post-user-details {
+    margin-left: 35px;
+}
+
+.post-username {
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-decoration: none;
+    color: rgb(22, 22, 22);
+}
+
+.post-date {
+    font-size: smaller;
+    color: rgb(82, 81, 81);
+    margin-top: 5px;
+}
+
+.post-text-content {
+    padding: 20px;
+    margin: 10px;
+}
+
+.post-footer {
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+
+.flex-align{
+    display: flex;
+    align-items: center;
+}
+
+.post-icon {
+    cursor: pointer;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 7px;
+}
+
+.unliked-icon {
+    background: url('/images/icons/heart-regular.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.liked-icon {
+    background-color: red;
+    mask-image: url('/images/icons/heart-solid.svg');
+    mask-repeat: no-repeat;
+    mask-size: cover;
+}
+
+.comment-btn {
+    margin-left: 20%;
+}
+
+.comment-icon {
+    background: url('/images/icons/comment-dots-regular.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.post-delete-btn {
+    width: min-content;
+    height: min-content;
+    position: absolute;
+    right: 20px;
+    top:20px;
+    border: none;
+    cursor: pointer;
+}
+
+.post-delete-btn i {
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    mask-image: url('/images/icons/trash-can-solid.svg');
+    mask-repeat: no-repeat;
+    mask-size: cover;
+    mask-position: center;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+  
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #d4d4d4;
+    border-radius: 5px;
+    transition: all 1s;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #cfcfcf;
+}
+
+.loading-screen {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loading-screen div {
+    width: 25px;
+    height: 25px;
+    background-color: rgb(100, 100, 100);
+    mask-image: url('/images/icons/spinner-solid.svg');
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    animation: loading-screen-spinner 1.5s ease-in-out infinite;
+}
+
+@keyframes loading-screen-spinner {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}

@@ -1,0 +1,207 @@
+#comment-container {
+    background-color: rgba(128, 128, 128, 0.527);
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 15;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+#comment-container-box {
+    height: 80%;
+    width: 50%;
+    max-width: 500px;
+    background-color: white;
+    border: none;
+    border-radius: 10px;
+    opacity: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+#comment-container .header {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#comment-container .header p {
+    font-size: 1.3em;
+    color: rgb(32, 32, 32);
+}
+
+#comment-container .header > button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+#comment-container .header > button i{
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-color: rgb(85, 84, 84);
+    mask-image: url('/images/icons/xmark-solid.svg');
+    mask-repeat: no-repeat;
+    mask-size: contain;
+    mask-position: center;
+}
+
+#comment-container-2 {
+    flex-grow: 1;
+    padding: 20px 5px;
+    overflow: auto;
+}
+
+.comment-tile {
+    display: flex;
+    margin-bottom: 15px;
+    border-bottom: 1px solid rgb(233, 231, 231);
+}
+
+.comment-user-pic {
+    display: block;
+    width: 35px;
+    height: 35px;
+    background-color: black;
+    border-radius: 50%;
+    border: 1px solid rgb(156, 155, 155);
+    background-size: contain;
+}
+
+.comment-description {
+    width: 50%;
+    flex-grow: 1;
+}
+
+.comment-like-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 20px;
+}
+
+.comment-like-div > p {
+    text-align: center;
+    font-size: 0.8em;
+    color: darkslategray;
+    margin-top: 3px;
+}
+
+.comment-like-btn {
+    width: min-content;
+    height: min-content;
+    border: none;
+    cursor: pointer;
+}
+
+.comment-like-btn  i{
+    display: block;
+    width: 20px;
+    height: 20px;
+}
+
+.comment-hollow-heart {
+    background-color: black;
+    mask-image: url('/images/icons/heart-regular.svg');
+    mask-repeat: no-repeat;
+    mask-size: contain;
+    mask-position: center;
+}
+
+.comment-solid-heart {
+    background-color: red;
+    mask-image: url('/images/icons/heart-solid.svg');
+    mask-repeat: no-repeat;
+    mask-size: contain;
+    mask-position: center;
+}
+
+.comment-description {
+    margin-left: 10px;
+}
+
+.comment-desc-header {
+    display: flex;
+}
+
+.comment-text {
+    margin-top: 10px;
+    font-size: 0.93em;
+    padding-bottom: 10px;
+}
+
+.comment-username {
+    color: rgb(22, 22, 22);
+    font-size: 0.98em;
+    text-decoration: none;
+}
+
+.comment-date {
+    font-size: 0.9em;
+    color: darkslategray;
+}
+
+.comment-delete {
+    width: min-content;
+    height: min-content;
+    border: none;
+    margin-left: 20px;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.comment-delete i {
+    display: block;
+    width: 15px;
+    height: 15px;
+    background-color: red;
+    mask-image: url('/images/icons/trash-can-solid.svg');
+    mask-repeat: no-repeat;
+    mask-size: contain;
+    mask-position: center;
+}
+
+#add-comment-form {
+    display: flex;
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 1px;
+    margin-bottom: 15px;
+}
+
+#add-comment-input {
+    flex-grow: 1;
+    border: none;
+    padding: 5px 20px;
+}
+
+#add-comment-input:focus {
+    outline: none;
+}
+
+#add-comment-btn {
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#add-comment-btn > i {
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-color: darkslategray;
+    mask-image: url('/images/icons/xmark-solid.svg');
+    mask-repeat: no-repeat;
+    mask-size: 50%;
+    mask-position: center;
+    transform: rotate(45deg);
+}
+

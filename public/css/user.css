@@ -1,0 +1,287 @@
+#main-container {
+    width: 100%;
+    height: 90%;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+}
+
+#profile-container {
+    background-color: rgb(255, 255, 255);
+    width: 70%;
+    overflow: auto;
+    padding: 50px 0;
+    margin: 0 auto;
+}
+
+#profile {
+    display: flex;
+    justify-content: center;
+}
+
+#profile-picture {
+    width: 80px;
+    height: 80px;
+    margin-right: 20px;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 1px solid gray;
+}
+
+#profile-picture > img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+    object-fit: contain;
+}
+
+#profile-desc {
+    width: 50%;
+}
+
+#profile-name {
+    font-size: 1.7rem;
+    letter-spacing: 2px;
+    word-spacing: 5px;
+    margin-bottom: 5px;
+}
+
+#profile-username {
+    color: rgb(102, 102, 102);
+    margin-bottom: 20px;
+}
+
+#profile-bio {
+    width: 90%;
+}
+
+.profile-btn {
+    padding: 5px 10px;
+    height: min-content;
+    font-size: 1.3rem;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px 2px #80808059;
+}
+
+#add-friend-btn {
+    border: 1px solid transparent;
+    background-color: blue;
+    color: white;
+}
+
+#cancel-request-btn {
+    background-color: beige;
+    border: 1px solid rgb(78, 78, 78);
+}
+
+#remove-friend-btn {
+    border: 1px solid transparent;
+    background-color: rgba(241, 19, 19, 0.829);
+    color: white;
+}
+
+#accept-request-btn-div {
+    display: flex;
+    align-items: center;
+    height: min-content;
+}
+
+#delete-request-btn {
+    width: min-content;
+    height: min-content;
+    margin-left: 15px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+#delete-request-btn i {
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-color: rgb(216, 2, 2);
+    mask-image: url('/images/icons/trash-can-solid.svg');
+    mask-repeat: no-repeat;
+    mask-size: contain;
+    mask-position: center;
+}
+
+#post-container {
+    background-color: rgba(255, 255, 255, 0.199);
+    width: 90%;
+    overflow: auto;
+    padding: 50px 0;
+    margin: 20px auto;
+}
+
+#post-container > h1{
+    margin-left: 20px;
+    color: rgb(59, 59, 59);
+    font-size: 2em;
+    border-top: 1px solid rgb(218, 216, 216);
+    padding-top: 20px;
+}
+
+.post-tile {
+    padding: 30px;
+    margin: auto;
+    background-color: rgb(241, 241, 233);
+    width: 90%;
+    margin-top: 10px;
+    margin-top: 20px;
+    border-radius: 5px;
+    border-bottom: 1px solid rgb(223, 220, 220);
+    box-shadow: 2px 1px 5px 2px #dfdfdf;
+}
+
+.post-head {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.post-dp img{
+    display: block;
+    width: 60px;
+    height: 60px;
+    background-size: cover;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    background-color: black;
+    object-fit: contain;
+}
+
+.post-user-details {
+    margin-left: 35px;
+}
+
+.post-username {
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-decoration: none;
+    color: rgb(22, 22, 22);
+}
+
+.post-date {
+    font-size: smaller;
+    color: rgb(82, 81, 81);
+    margin-top: 5px;
+}
+
+.post-delete-btn {
+    width: min-content;
+    height: min-content;
+    position: absolute;
+    right: 0;
+    top:0;
+    border: none;
+    cursor: pointer;
+}
+
+.post-delete-btn i {
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    mask-image: url('/images/icons/trash-can-solid.svg');
+    mask-repeat: no-repeat;
+    mask-size: cover;
+    mask-position: center;
+}
+
+.post-text-content {
+    padding: 20px;
+    margin: 10px;
+}
+
+.post-footer {
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+
+.flex-align{
+    display: flex;
+    align-items: center;
+}
+
+.post-icon {
+    cursor: pointer;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 7px;
+}
+
+.unliked-icon {
+    background: url('/images/icons/heart-regular.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.liked-icon {
+    background-color: red;
+    mask-image: url('/images/icons/heart-solid.svg');
+    mask-repeat: no-repeat;
+    mask-size: cover;
+}
+
+.comment-btn {
+    margin-left: 20%;
+}
+
+.comment-icon {
+    background: url('/images/icons/comment-dots-regular.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+  
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #d4d4d4;
+    border-radius: 5px;
+    transition: all 1s;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #cfcfcf;
+}
+
+.loading-screen {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loading-screen div {
+    width: 25px;
+    height: 25px;
+    background-color: rgb(100, 100, 100);
+    mask-image: url('/images/icons/spinner-solid.svg');
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    animation: loading-screen-spinner 1.5s ease-in-out infinite;
+}
+
+@keyframes loading-screen-spinner {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}

@@ -1,0 +1,21 @@
+each comment in comments
+    div(class="comment-tile" id=comment._id)
+        img(class="comment-user-pic" src="/profile_pictures/"+comment.author.profilePicture, alt="profile-picture")
+        div(class="comment-description")
+            div(class="comment-desc-header")
+                div(class="comment-desc-title")
+                    a(href="#" class="comment-username")="@"+comment.author.username
+                    p(class="comment-date")=comment.createdOnElapsed()
+                - if(comment.author.username === currUsername)
+                    button(class="comment-delete" onclick="commentDeleteBtnClickHandler(event)")
+                        i
+            div(class="comment-text")=comment.text
+        div(class="comment-like-div")
+            -if(likedComments.includes(comment._id.toString())) 
+                button(class="comment-like-btn comment-solid-heart" onclick="commentLikeBtnClickHandler(event)")
+                    i
+            - else 
+                button(class="comment-like-btn comment-hollow-heart" onclick="commentLikeBtnClickHandler(event)")
+                    i
+
+            p(class="comment-like-count")=comment.likes

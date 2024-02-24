@@ -1,0 +1,11 @@
+nav(id="navbar")
+    a(href="/" id="nav-title") BRONZE
+    div(id="control-btn-div")
+        a(href="/user/"+currUsername class="nav-profile-picture" title="You" id="nav-user-profile" data-username=currUsername)
+            img(src="/profile_pictures/"+profilePicture, alt="profile picture")
+        button(id="create-post-btn" title="Create new post")
+            i
+        a(href="/search" id="find-friends-btn" title="Find friends")
+            i 
+        a(href="/auth/logout" id="logout-btn") Logout
+                

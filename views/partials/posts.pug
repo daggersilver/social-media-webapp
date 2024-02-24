@@ -1,0 +1,22 @@
+each post in posts
+    div(class="post-tile", id=post._id)
+        div(class="post-head")
+            a(href="/user/"+post.author.username, class="post-dp")
+                img(src="/profile_pictures/"+post.author.profilePicture, alt="profile picture") 
+            div(class="post-user-details")
+                a(href="/user/"+post.author.username, class="post-username")="@"+post.author.username
+                p(class="post-date")=post.createdOnElapsed()
+            - if(post.author.username == currUsername)
+                button(class="post-delete-btn" onclick="postDeleteBtnClickHandler(event)")
+                    i 
+        div(class="post-text-content")=post.text
+        div(class="post-footer")
+            div(class="like-btn flex-align")
+                - if (likedPosts.includes(post._id)) 
+                    i(class="post-icon liked-icon like-btn-icon" onclick="postLikeBtnClickHandler(event)")
+                - else
+                    i(class="post-icon unliked-icon like-btn-icon" onclick="postLikeBtnClickHandler(event)")
+                span=post.getLikes()
+            div(class="comment-btn flex-align")
+                i(class="post-icon comment-icon" onclick="postCommentBtnClickHandler(event)")
+                span(class="comment-icon-text")=post.getCommentCount()

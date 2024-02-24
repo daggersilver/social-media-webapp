@@ -1,0 +1,18 @@
+script(src="script/friend-requests.js") 
+
+p Friend Requests
+
+- if (friendRequests.length > 0) {
+    each request in friendRequests
+        div(class="user-tile small-user-tile")
+            div(class="user-tile-1")
+                div(class="user-profile-pic")
+                    img(src="/profile_pictures/"+request.profilePicture, alt="")
+                div(class="user-desc")
+                    a(href="#" class="user-name")=request.getName()
+                    p(class="user-username")="@"+request.username
+            div(class="btn-tile")
+                a(href="#" class="user-link small-link request-accept-btn" data-user_id=request._id) accept 
+                a(href="#" class="user-link small-link request-cancel-btn" data-user_id=request._id) cancel 
+- } else
+    p(class="gray-text") No new friend requests

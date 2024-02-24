@@ -1,0 +1,98 @@
+:root {
+    --primary-dark: rgb(44, 43, 43);   
+}
+
+#message-box {
+    width: 80%;
+    max-width: 350px;
+    height: 90%;
+    max-height: 400px;
+    background-color: white;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    border: 1px solid var(--primary-dark);
+    display: none;
+    flex-direction: column;
+}
+
+#message-box-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primary-dark);
+    color: white;
+    padding: 10px;
+}
+
+#message-box-close-btn {
+    background-color: transparent;
+    border: none;
+}
+
+#message-box-close-btn i {
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-color: rgb(255, 251, 251);
+    mask-image: url('/images/icons/xmark-solid.svg');
+    mask-repeat: no-repeat;
+    mask-size: contain;
+    mask-position: center;
+    cursor: pointer;
+}
+
+#message-box-main-container {
+    flex-grow: 1;
+    overflow: auto;
+}
+
+.message-box-message {
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.sent-message {
+    margin: 5px 5px 5px 20%;
+    background-color: rgb(138, 232, 255);
+}
+
+.received-message {
+    margin: 5px 20% 5px 5px;
+    background-color: rgb(203, 205, 206);
+}
+
+
+#send-message-form {
+    display: flex;
+    padding: 0.5em;
+    border-top: 1px solid var(--primary-dark);
+}
+
+#send-message-form-input {
+    border: none;
+    flex-grow: 1;
+    padding: 0.3em 1em;
+}
+
+#send-message-form-input:focus {
+    border: none;
+    outline: none;
+}
+
+#send-message-form-btn {
+    background: transparent;
+    border: none;
+}
+
+#send-message-form-btn i{
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-color: var(--primary-dark);
+    mask-image: url('/images/icons/paper-plane-solid.svg');
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: contain;
+    cursor: pointer;
+}

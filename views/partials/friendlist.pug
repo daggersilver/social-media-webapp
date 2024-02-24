@@ -1,0 +1,12 @@
+
+each friend in friendlist
+    div(class="user-tile" data-username=friend.username data-user_id=friend._id)
+        div(class="user-tile-1")
+            div(class="user-profile-pic")
+                img(src="/profile_pictures/"+friend.profilePicture, alt="profile-picture")
+            div(class="user-desc")
+                a(href="/user/"+friend.username class="user-name")=friend.getName()
+                p(class="user-username")="@"+friend.username
+        div(class="btn-tile")
+            button(class="message-btn" onclick="messageUserBtnClickHandler(event)") 
+                i 

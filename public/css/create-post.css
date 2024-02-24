@@ -1,0 +1,84 @@
+#create-post-background {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.473);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    display: none;
+}
+
+#create-post-form {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 1.5em;
+    width: 80%;
+    max-width: 400px;
+    height: 90%;
+    max-height: 350px;
+    border-radius: 10px;
+    color: rgb(41, 40, 40);
+}
+
+#create-post-form-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2em;
+}
+
+#create-post-form-heading {
+    font-size: 1.3em;
+}
+
+#create-post-form-close-btn {
+    width: min-content;
+    height: min-content;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+#create-post-form-close-btn i {
+    width: 20px;
+    height: 20px;
+    display: block;
+    background-color: gray;
+    mask-image: url('/images/icons/xmark-solid.svg');
+    mask-repeat: no-repeat;
+    mask-size: contain;
+    mask-position: center;
+}
+
+label[for='post_content'] {
+    font-size: 0.9em;
+    margin-bottom: 0.2em;
+}
+
+#post_content {
+    height: 8em;
+    padding: 0.5em;
+    flex-grow: 1;
+    outline: none;
+    resize: none;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
+#post-content:focus {
+    outline: none;
+}
+
+#create-post-submit-btn {
+    padding: 0.4em 2em;
+    margin: 1em 0;
+    width: min-content;
+    background-color: rgb(201, 0, 201);
+    border: 1px solid transparent;
+    border-radius: 5px;
+    color: white;
+}

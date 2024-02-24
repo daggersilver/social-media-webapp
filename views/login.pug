@@ -1,0 +1,30 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Sign In
+        link(rel="stylesheet", href="/css/login.css")
+        script(src="/script/login.js") 
+    body 
+        include partials/flash-messages.pug
+
+        div(id="overlay")
+            div(id="overlay-1")
+            div(id="overlay-2")
+
+        div(id="main-container")
+            div(id="about-page")
+                h1 Bronze
+                h2 Explore, connect, and inspire on your personalized social playground.
+            form(method="post", id="login-form", class="form") 
+                p(class="heading") Sign In
+                label(for="username") Username / Email:
+                input(type="text", name="username" id="username" placeholder="Enter your username or email" autocomplete="off" required)
+                label(for="password") Password: 
+                div(class="password-field")
+                    input(type="password", name="password", id="password" placeholder="Enter your password" required)
+                    i
+                button(type="submit") Log In
+                p Or
+                    a(href="/auth/register") Sign Up

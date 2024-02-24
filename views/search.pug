@@ -1,0 +1,25 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Find Friends
+        link(rel="stylesheet", href="/css/navbar.css", type="text/css")
+        link(rel="stylesheet", href="/css/search.css", type="text/css")
+        script(src="/script/search.js") 
+    body 
+        include partials/navbar.pug
+        include partials/create-post.pug
+
+        div(id="main-container")
+            div(id="search-container")
+                form(id="search-form" action="#")
+                    input(type="text" name="queryInput" id="search-input" placeholder="Enter name or username" autocomplete="off")
+                    button(type="submit", id="search-btn")
+                        i 
+                div(id="search-result-container")
+            div(id="side-container")
+                div(id="friend-requests-container")
+                    include partials/friend-requests.pug
+                div(id="user-suggestion-container")
+                    include partials/friend-suggestions.pug

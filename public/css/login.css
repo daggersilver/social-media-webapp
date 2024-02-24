@@ -1,0 +1,140 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+#overlay {
+    background-color: rgb(20, 18, 18);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: -1;
+}
+
+
+#overlay-1 {
+    --background: rgb(27, 27, 29);
+    width: 0;
+    height: 0;
+    border: 50vh solid transparent;
+    border-left: 50vh solid var(--background);
+    border-bottom: 50vh solid var(--background);
+    position: absolute;
+    top: 0;
+}
+
+#overlay-2 {
+    --background: rgb(37, 37, 39);
+    width: 0;
+    height: 0;
+    border: 50vh solid transparent;
+    border-left: 50vh solid var(--background);
+    border-top: 50vh solid var(--background);
+    position: absolute;
+    top:0;
+}
+
+#main-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+#about-page {
+    width: 40%;
+    margin: 5%;
+}
+
+#about-page h1 {
+    font-size: 5rem;
+    color: rgb(230, 195, 0);
+    margin-top: 30px;
+}
+
+#about-page h2 {
+    margin-top: 20px;
+    color: gray;
+}
+
+#login-form {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    max-width: 450px;
+    padding: 50px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    margin-top: 8%;
+    margin-right: 100px;
+}
+
+#login-form p {
+    text-align: center;
+    margin: 10px;
+}
+
+form .heading {
+    font-size: 1.3em;
+}
+
+#login-form label {
+    margin-bottom: 8px;
+    margin-top: 20px;
+}
+
+#login-form input {
+    padding: 8px 10px;
+    font-size: 16px;
+}
+
+#login-form input:focus {
+    outline: none;
+}
+
+.password-field {
+    width: 100%;
+    display: flex;
+}
+
+#login-form > input, .password-field {
+    border: 1px solid black;
+}
+
+.password-field i {
+    width: 35px;
+    background-color: rgb(73, 73, 73);
+    mask-image: url('/images/icons/eye-solid.svg');
+    mask-repeat: no-repeat;
+    mask-size: 50%;
+    mask-position: center;
+    cursor: pointer;
+}
+
+
+.password-field input {
+    flex-grow: 1;
+    border: 1px solid transparent;
+}
+
+form button {
+    --btn-color: rgb(226, 165, 11);
+    margin: 20px auto;
+    width: fit-content;
+    padding: 8px 20px;
+    background-color: var(--btn-color);
+    color: white;
+    border: 1px solid var(--btn-color);
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+form a {
+    color: rgb(90, 88, 88);
+    margin-left: 10px;
+}

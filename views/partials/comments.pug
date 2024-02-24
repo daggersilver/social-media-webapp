@@ -1,0 +1,13 @@
+link(rel="stylesheet", href="/css/comments.css")
+
+div(id="comment-container" )
+    div(id="comment-container-box")
+        div(class="header") 
+            p Comments
+            button(class="close-btn" onclick="commentPanelCloseBtnClickHandler()")
+                i
+        div(id="comment-container-2")
+        form(id="add-comment-form" onsubmit="addCommentFormSubmitHandler(event)")
+            input(type="text" id="add-comment-input" placeholder="Comment your thoughts" autocomplete="off" required)
+            button(type="submit" id="add-comment-btn")
+                i  

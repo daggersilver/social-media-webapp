@@ -1,0 +1,15 @@
+
+- if(users.length > 0) {
+    each user in users    
+        div(class="user-tile")
+            div(class="user-tile-1")
+                div(class="user-profile-pic")
+                    img(src="/profile_pictures/"+user.profilePicture, alt="")
+                div(class="user-desc")
+                    p(class="user-name")=user.getName()
+                    p(class="user-username")="@"+user.username
+            a(href=`/user/${user.username}` class="user-link") visit profile
+- }
+- else 
+    div(id="no-user-found-dialogbox") No user found with that name or username
+    

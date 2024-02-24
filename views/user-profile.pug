@@ -1,0 +1,40 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Document
+        link(rel="stylesheet", href="/css/navbar.css", type="text/css")
+        link(rel="stylesheet", href="/css/user.css", type="text/css")
+        script(src="/script/user-profile.js") 
+        script(src="/script/post.js")
+    body 
+        include partials/navbar.pug
+        include partials/comments.pug
+        include partials/create-post.pug
+
+        div(id="main-container")
+            div(id="profile-container")
+                div(id="profile" data-username=user.username)
+                    div(id="profile-picture")
+                        img(src="/profile_pictures/"+user.profilePicture, alt="")
+                    div(id="profile-desc")
+                        p(id="profile-name")=user.getName()
+                        p(id="profile-username")="@"+user.username
+                        p(id="profile-bio")=user.bio
+                    
+                    - if (friendList.includes(user._id.toString()))
+                        button(id="remove-friend-btn" class="profile-btn") Unfriend
+                    - else if (requestedFriends.includes(user._id.toString()))
+                        button(id="cancel-request-btn" class="profile-btn") Requested
+                    - else if(friendRequestsReceived.includes(user._id.toString()))
+                        div(id="accept-request-btn-div")
+                            button(id="accept-request-btn" class="profile-btn") Accept 
+                            button(id="delete-request-btn")
+                                i
+                    - else if(user.username !== currUsername)
+                        button(id="add-friend-btn" class="profile-btn") Add Friend
+            
+                div(id="post-container")
+                    h1 Posts
+                    include partials/posts.pug

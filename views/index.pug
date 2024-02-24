@@ -1,0 +1,28 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Social Media App
+        link(rel="stylesheet", href="/css/navbar.css", type="text/css")
+        link(rel="stylesheet", href="/css/home.css", type="text/css")
+        script(src="./script/home.js") 
+        script(src="./script/post.js")
+        script(src="/script/message-box.js") 
+
+    body(data-username=currUsername) 
+        include partials/navbar.pug
+        include partials/comments.pug
+        include partials/create-post.pug
+        include partials/message-box.pug
+        
+        div(id="main-container")
+            div(id="post-container")
+                include partials/posts.pug
+            div(id="friendlist-container")
+                p My Friends
+
+                include partials/friendlist.pug
+
+                
+    

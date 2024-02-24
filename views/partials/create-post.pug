@@ -1,0 +1,12 @@
+link(rel="stylesheet", href="/css/create-post.css")
+script(src="/script/create-post.js") 
+
+div(id="create-post-background")
+    form(id="create-post-form")
+        div(id="create-post-form-header")
+            p(id="create-post-form-heading") Create Post
+            button(id="create-post-form-close-btn" type="button")
+                i
+        label(for="post_content") Post Content:
+        textarea(cols="30", rows="10" id="post_content" placeholder="What's on your mind today?" autocomplete="off")
+        button(type="submit" id="create-post-submit-btn") Post

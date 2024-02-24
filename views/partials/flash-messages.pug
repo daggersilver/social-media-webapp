@@ -1,0 +1,8 @@
+link(rel="stylesheet", href="/css/flash-messages.css")
+script(src="/script/flash-messages.js") 
+
+div(id="flash-container")
+    each error in errors
+        p(class="flash-msg error-msg")=error
+    each success in successes
+        p(class="flash-msg success-msg")=success
